@@ -1,0 +1,23 @@
+.tankkaus {
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    border-bottom: 2.5px groove black;
+  }
+  
+.tankkaus__rivi {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.1em;
+}
+
+.tankkaus__asema, .tankkaus__litrahinta {
+    font-weight: bold;
+}
+
+.tankkaus__litra, .tankkaus__euro,
+.tankkaus__pvm, .tankkaus__km {
+    font-size: 95%;
+    color: #666;
+}

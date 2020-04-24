@@ -1,0 +1,14 @@
+.otsikko {
+    background-color: #f78b08da;
+    display: flex;
+    justify-content: center;
+    max-height: 4em;
+    min-height: 4em;
+    align-items: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .header h1 {
+    font-size: 1.5em;
+  }  

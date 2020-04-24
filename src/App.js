@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Näyttötehtävän aloitus!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Otsikko from './components/Otsikko/Otsikko';
+import Menu from './components/Menu/Menu';
+import Tankkaus from './components/Tankkaus/Tankkaus';
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Otsikko />
+        <div className="content">
+          <Tankkaus />
+          <Tankkaus />
+          <Tankkaus />
+          <Tankkaus />
+          <Tankkaus />
+        </div>
+        <Menu />
+      </div>
+    );
+  }
 }
 
 export default App;
