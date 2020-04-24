@@ -17,20 +17,3 @@
 .App > * {
   flex: 1 1 auto;
 }
-
-.content {
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-}
-
-::-webkit-scrollbar {
-  width: 0.5em;
-}
-
-::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0.0);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.1);
-}
