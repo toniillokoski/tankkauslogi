@@ -4,6 +4,7 @@
     padding-left: 0.4em;
     padding-right: 0.4em;
     border-bottom: 2.5px groove black;
+    color: white;
   }
   
 .tankkaus__rivi {
@@ -19,5 +20,5 @@
 .tankkaus__litra, .tankkaus__euro,
 .tankkaus__pvm, .tankkaus__km {
     font-size: 95%;
-    color: #666;
+    color: rgba(255, 255, 255, 0.534);
 }

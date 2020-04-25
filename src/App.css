@@ -12,8 +12,14 @@
   display: flex;
   flex-direction: column;
   font-family: 'Ubuntu', sans-serif;
+  color: #000000;
+  transform: translateZ(0);
 }
 
 .App > * {
   flex: 1 1 auto;
+}
+
+.kokonaan {
+background-color: #000000d8;
 }
