@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Menu.css';
 
 
@@ -11,9 +11,9 @@ import SettingsIcon from '@material-ui/icons/Settings';
 function Menu(props) {
     return (
       <div className="menu">
-        <Link to="/"><div className="menu__nappi"><LocalGasStationIcon htmlColor="#000000" /></div></Link>
-        <Link to="/ajo"><div className="menu__nappi"><DriveEtaIcon htmlColor="#000000" /></div></Link>
-        <Link to="/settings"><div className="menu__nappi"><SettingsIcon htmlColor="#000000" /></div></Link>
+        <NavLink to="/"><div className="menu__nappi"><LocalGasStationIcon htmlColor="#000000" /></div></NavLink>
+        <NavLink to="/ajo"><div className="menu__nappi"><DriveEtaIcon htmlColor="#000000" /></div></NavLink>
+        <NavLink to="/settings"><div className="menu__nappi"><SettingsIcon htmlColor="#000000" /></div></NavLink>
       </div>
     )
   }
