@@ -4,13 +4,17 @@ import Tankkaus from '../Tankkaus/Tankkaus';
 import Content from '../Content/Content';
 
 function Tankit(props) {
+
+let rows = props.data.map( invoice => {
+  return (
+      <Tankkaus data={invoice} />
+    );
+  }
+);
+
     return (
       <Content>
-        <Tankkaus />
-        <Tankkaus />
-        <Tankkaus />
-        <Tankkaus />
-        <Tankkaus />
+        {rows}
       </Content>
     );
   }
