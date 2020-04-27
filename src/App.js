@@ -11,6 +11,7 @@ import Settings from './components/Settings/Settings';
 import AddTankki from './components/AddTankki/AddTankki';
 
 class App extends Component {
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -39,8 +40,8 @@ render() {
         <div className="App">
           <Otsikko />
           <Route path="/" exact render={() => <Tankit data={this.state.data} />} />
-          <Route path="/ajo" exact component={Ajopäiväkirja} />
-          <Route path="/settings" exact component={Settings} />
+          <Route path="/ajo" component={Ajopäiväkirja} />
+          <Route path="/settings" component={Settings} />
           <Route path="/add" render={() => <AddTankki onFormSubmit={this.handleFormSubmit} />} />
           <Menu />
         </div>

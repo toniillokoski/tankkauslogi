@@ -10,7 +10,7 @@ function Tankit(props) {
 
 let rows = props.data.map( invoice => {
   return (
-      <Tankkaus data={invoice} />
+      <Tankkaus data={invoice} key={invoice.id} />
     );
   }
 );

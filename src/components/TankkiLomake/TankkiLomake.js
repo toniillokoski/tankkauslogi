@@ -1,7 +1,8 @@
 import React from 'react'
 import Button from '../buttons'
 import './TankkiLomake.css';
-import { withRouter } from 'react-router'
+import { withRouter } from 'react-router';
+import { v4 as uuidv4 } from 'uuid';
 
 class TankkiLomake extends React.Component {
 
@@ -10,10 +11,10 @@ class TankkiLomake extends React.Component {
         this.state = {
             data: {
                 asema: "ABC",
-                litra: undefined,
-                euro: undefined,
-                kilometrit: undefined,
-                pvm: undefined
+                litra: "",
+                euro: "",
+                kilometrit: "",
+                pvm: ""
             }
         };
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -37,7 +38,10 @@ class TankkiLomake extends React.Component {
     handleSubmit(event) {
         event.preventDefault();
         let data = Object.assign({}, this.state.data);
-        data.euro = parseFloat(data.euro, data.litra, data.kilometrit);
+        data.euro = parseFloat(data.euro);
+        data.litra = parseFloat(data.litra);
+        data.kilometrit = parseFloat(data.kilometrit);
+        data.id = data.id ? data.id : uuidv4();
         this.props.onFormSubmit(data);
         this.props.history.push("/");
     }
@@ -54,7 +58,7 @@ class TankkiLomake extends React.Component {
 
           <div className="uusiTankkaus__rivi">
             <div>
-              <label for="asema">Tankkausasema</label>
+              <label htmlFor="asema">Tankkausasema</label>
               <select name="asema" value={this.state.data.asema} onChange={this.handleInputChange}>
                 <option value="ABC">ABC</option>
                 <option value="Neste">Neste</option>
@@ -69,12 +73,12 @@ class TankkiLomake extends React.Component {
 
           <div className="uusiTankkaus__rivi">
             <div>
-              <label for="litra">Litrat</label>
+              <label htmlFor="litra">Litrat</label>
               <input type="number" name="litra" step="0.01" value={this.state.data.litra} onChange={this.handleInputChange}/>
             </div>
             
             <div>
-              <label for="euro">Eurot</label>
+              <label htmlFor="euro">Eurot</label>
               <input type="number" name="euro" step="0.01" value={this.state.data.euro} onChange={this.handleInputChange}/>
             </div>
           </div>
@@ -82,18 +86,17 @@ class TankkiLomake extends React.Component {
           <div className="uusiTankkaus__alimmat">
             <div className="uusiTankkaus__rivi">
               <div>
-                <label for="kilometrit">Mittarilukema</label>
+                <label htmlFor="kilometrit">Mittarilukema</label>
                 <input type="tel" name="kilometrit" size="10" value={this.state.data.kilometrit} onChange={this.handleInputChange}/>
               </div>
             </div>
 
             <div className="uusiTankkaus__rivi">
               <div>
-                <label for="pvm">Päivämäärä</label>
+                <label htmlFor="pvm">Päivämäärä</label>
                 <input 
                 type="date" 
                 name="pvm" 
-                defaultValue={new Date()}
                 value={this.state.data.pvm}
                 onChange={this.handleInputChange}/>
               </div>
