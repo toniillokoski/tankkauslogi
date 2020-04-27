@@ -19,6 +19,7 @@ class App extends Component {
       data: testdata
     }
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
+    this.handleDeleteTankki = this.handleDeleteTankki.bind(this);
   }
 
 handleFormSubmit(newdata) {
@@ -39,6 +40,14 @@ handleFormSubmit(newdata) {
   });
 }
 
+handleDeleteTankki(id) {
+  let storeddata = this.state.data.slice();
+  storeddata = storeddata.filter(item => item.id !== id);
+  this.setState({
+    data: storeddata
+  });
+}
+
 render() {
     return (
       <div className="kokonaan">
@@ -49,7 +58,10 @@ render() {
           <Route path="/ajo" component={Ajopäiväkirja} />
           <Route path="/settings" component={Settings} />
           <Route path="/add" render={() => <AddTankki onFormSubmit={this.handleFormSubmit} />} />
-          <Route path="/edit/:id" render={(props) => <EditTankki data={this.state.data} onFormSubmit={this.handleFormSubmit} {...props} />} />
+          <Route path="/edit/:id" render={(props) => <EditTankki data={this.state.data} 
+                                                                 onFormSubmit={this.handleFormSubmit} 
+                                                                 onDeleteTankki={this.handleDeleteTankki} 
+                                                                 {...props} />} />
           <Menu />
         </div>
       </Router>

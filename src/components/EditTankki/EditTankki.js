@@ -19,7 +19,7 @@ function EditTankki(props) {
 
 
 
-      <TankkiLomake onFormSubmit={props.onFormSubmit} data={itemData} />
+      <TankkiLomake onFormSubmit={props.onFormSubmit} data={itemData} onDeleteTankki={props.onDeleteTankki} />
      
       </div>
 

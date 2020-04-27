@@ -21,6 +21,7 @@ class TankkiLomake extends React.Component {
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleCancel = this.handleCancel.bind(this);
+        this.handleDeleteTankki = this.handleDeleteTankki.bind(this);
     }
 
     handleInputChange(event) {
@@ -45,6 +46,12 @@ class TankkiLomake extends React.Component {
         data.id = data.id ? data.id : uuidv4();
         this.props.onFormSubmit(data);
         this.props.history.push("/");
+    }
+
+    handleDeleteTankki(event) {
+      event.preventDefault();
+      this.props.onDeleteTankki(this.state.data.id);
+      this.props.history.push("/");
     }
 
     handleCancel(event) {
@@ -112,6 +119,15 @@ class TankkiLomake extends React.Component {
           <Button type="submit" secondary>{this.state.data.id ? "TALLENNA" : "LISÄÄ"}</Button>
           </div>
         </div>
+
+        { this.props.onDeleteTankki ? 
+        <div className="uusiTankkaus__napit">
+          <div>
+            <Button onClick={this.handleDeleteTankki}>POISTA</Button>
+          </div>
+          <div></div>
+        </div>
+        : "" }
 
         </div>
       </form>
