@@ -8,14 +8,15 @@ class TankkiLomake extends React.Component {
 
     constructor(props) {
         super(props);
+        const data = props.data ? props.data : {
+          asema: "ABC",
+          litra: "",
+          euro: "",
+          kilometrit: "",
+          pvm: ""
+      }
         this.state = {
-            data: {
-                asema: "ABC",
-                litra: "",
-                euro: "",
-                kilometrit: "",
-                pvm: ""
-            }
+            data: data
         };
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -108,7 +109,7 @@ class TankkiLomake extends React.Component {
             <Button onClick={this.handleCancel}>PERUUTA</Button>
           </div>
           <div>
-            <Button type="submit">LISÄÄ</Button>
+          <Button type="submit" secondary>{this.state.data.id ? "TALLENNA" : "LISÄÄ"}</Button>
           </div>
         </div>
 

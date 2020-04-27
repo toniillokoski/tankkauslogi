@@ -1,10 +1,12 @@
 .tankkaus {
+    /*
     padding-top: 0.7em;
     padding-bottom: 0.7em;
     padding-left: 0.4em;
-    padding-right: 0.4em;
+    */
     border-bottom: 2.5px groove black;
     color: white;
+    display: flex;
   }
   
 .tankkaus__rivi {
@@ -20,5 +22,25 @@
 .tankkaus__litra, .tankkaus__euro,
 .tankkaus__pvm, .tankkaus__km {
     font-size: 95%;
-    color: rgba(255, 255, 255, 0.534);
+    color: rgba(255, 255, 255, 0.911);
+}
+
+.tankkaus > div {
+    flex: 1 1 auto;
+    padding: 1em;
+}
+
+.tankkaus__linkki {
+    max-width: 1em;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, rgba(255, 153, 0, 0.699) 80%, rgba(255, 0, 51, 0.664) 100%);
+    border-radius: 5px;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.tankkaus:hover .tankkaus__linkki {
+    display: flex;
 }

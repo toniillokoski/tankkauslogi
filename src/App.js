@@ -9,6 +9,7 @@ import Tankit from './components/Tankit/Tankit';
 import Ajopäiväkirja from './components/Ajopäiväkirja/Ajopäiväkirja';
 import Settings from './components/Settings/Settings';
 import AddTankki from './components/AddTankki/AddTankki';
+import EditTankki from './components/EditTankki/EditTankki';
 
 class App extends Component {
   
@@ -22,7 +23,12 @@ class App extends Component {
 
 handleFormSubmit(newdata) {
   let storeddata = this.state.data.slice();
-  storeddata.push(newdata);
+  const index = storeddata.findIndex(item => item.id === newdata.id);
+  if (index >= 0) {
+    storeddata[index] = newdata;
+  } else {
+    storeddata.push(newdata);
+  }
   storeddata.sort((a,b) => { 
     const aDate = new Date(a.pvm);
     const bDate = new Date(b.pvm);
@@ -43,6 +49,7 @@ render() {
           <Route path="/ajo" component={Ajopäiväkirja} />
           <Route path="/settings" component={Settings} />
           <Route path="/add" render={() => <AddTankki onFormSubmit={this.handleFormSubmit} />} />
+          <Route path="/edit/:id" render={(props) => <EditTankki data={this.state.data} onFormSubmit={this.handleFormSubmit} {...props} />} />
           <Menu />
         </div>
       </Router>

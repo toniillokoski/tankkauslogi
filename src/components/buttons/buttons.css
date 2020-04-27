@@ -13,11 +13,13 @@
     justify-content: center;
     align-items: center;
     opacity: 0.8;
+    font-weight: bold;
+    border: 1px solid #0c0c0c;
 }
 
 .button:active {
     box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 5px;
-    background-color: #f78b08;
+    background-color: #7c7b7b;
 }
 
 .button:hover {
@@ -31,16 +33,17 @@
 }
 
 .button--primary:active {
-    background-color: #b86a0cda;
+    background: radial-gradient(circle, rgb(255, 183, 75) 50%, rgb(247, 58, 96) 80%);
 }
 
 .button--secondary {
-    background-color: black;
-    color: #ffffff;
+    background: linear-gradient(to top left, #ffb13c 0%, #f83e3e 100%);
+    color: #000000;
+    font-weight: bold;
 }
 
 .button--secondary:active {
-    background-color: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to top left, #fa9c0f 0%, #f71111 100%);
 }
 
 .button:disabled {
