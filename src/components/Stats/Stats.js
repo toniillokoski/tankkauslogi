@@ -3,9 +3,6 @@ import Content from '../Content/Content';
 import './Stats.css';
 
 import { Line } from 'react-chartjs-2';
-/*
-import { months } from 'moment';
-*/
 import { Doughnut } from 'react-chartjs-2';
 
 function Stats(props) {

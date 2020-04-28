@@ -13,7 +13,7 @@ class TankkiLomake extends React.Component {
           litra: "",
           euro: "",
           kilometrit: "",
-          pvm: new Date()
+          pvm: ""
       }
         this.state = {
             data: data
