@@ -6,7 +6,7 @@
 }
 
 .App {
-  max-width: 40em;
+  max-width: 38em;
   margin: 0 auto;
   height: 100vh;
   display: flex;
@@ -18,8 +18,9 @@
 
 .App > * {
   flex: 1 1 auto;
+  background-color: #1f1e1e;
 }
 
 .kokonaan {
-background-color: #000000d8;
+background-color: #000000de;
 }

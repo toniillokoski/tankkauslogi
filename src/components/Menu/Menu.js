@@ -12,7 +12,7 @@ function Menu(props) {
     return (
       <div className="menu">
         <NavLink to="/"><div className="menu__nappi"><LocalGasStationIcon htmlColor="#000000" /></div></NavLink>
-        <NavLink to="/ajo"><div className="menu__nappi"><DriveEtaIcon htmlColor="#000000" /></div></NavLink>
+        <NavLink to="/stats"><div className="menu__nappi"><DriveEtaIcon htmlColor="#000000" /></div></NavLink>
         <NavLink to="/settings"><div className="menu__nappi"><SettingsIcon htmlColor="#000000" /></div></NavLink>
       </div>
     )

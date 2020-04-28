@@ -1,0 +1,9 @@
+.tankkaus__kooste {
+    display: flex;
+    padding: 0.7em;
+    border-bottom: 2.5px groove black;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+

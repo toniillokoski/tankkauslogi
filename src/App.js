@@ -6,7 +6,7 @@ import testdata from './testdata';
 import Otsikko from './components/Otsikko/Otsikko';
 import Menu from './components/Menu/Menu';
 import Tankit from './components/Tankit/Tankit';
-import Ajopäiväkirja from './components/Ajopäiväkirja/Ajopäiväkirja';
+import Stats from './components/Stats/Stats';
 import Settings from './components/Settings/Settings';
 import AddTankki from './components/AddTankki/AddTankki';
 import EditTankki from './components/EditTankki/EditTankki';
@@ -55,7 +55,7 @@ render() {
         <div className="App">
           <Otsikko />
           <Route path="/" exact render={() => <Tankit data={this.state.data} />} />
-          <Route path="/ajo" component={Ajopäiväkirja} />
+          <Route path="/stats" render={() => <Stats data={this.state.data} /> } />
           <Route path="/settings" component={Settings} />
           <Route path="/add" render={() => <AddTankki onFormSubmit={this.handleFormSubmit} />} />
           <Route path="/edit/:id" render={(props) => <EditTankki data={this.state.data} 

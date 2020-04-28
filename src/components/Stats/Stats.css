@@ -1,0 +1,22 @@
+.stats {
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+.stats__graph {
+    position: relative;
+    height: 15em;
+}
+
+.stats h3 {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: rgba(248, 153, 36, 0.842);
+}
+

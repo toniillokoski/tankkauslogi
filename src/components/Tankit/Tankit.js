@@ -1,10 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Tankit.css';
 
 import Tankkaus from '../Tankkaus/Tankkaus';
 import Content from '../Content/Content';
 
 import { FloatingButton } from '../buttons';
+
+
 
 function Tankit(props) {
 
@@ -16,6 +19,7 @@ let rows = props.data.map( invoice => {
 );
 
     return (
+      
       <Content>
         <div style={{paddingBottom: '4rem'}}>
         {rows}

@@ -13,7 +13,7 @@ class TankkiLomake extends React.Component {
           litra: "",
           euro: "",
           kilometrit: "",
-          pvm: ""
+          pvm: new Date()
       }
         this.state = {
             data: data
@@ -32,7 +32,7 @@ class TankkiLomake extends React.Component {
         this.setState({
             data: {
                 ...this.state.data,
-                [name]: value
+                [name]: value,
             }
         });
     }
