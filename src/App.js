@@ -36,8 +36,8 @@ componentDidMount() {
       this.setState({
         user: user
       });
-      this.refData = this.dbRef.collection('data');
-    this.refData.orderBy("pvm","desc").onSnapshot((docs) => {
+      this.refData = this.dbRef.collection("users").doc(user.uid).collection('data');
+      this.refData.orderBy("pvm","desc").onSnapshot((docs) => {
       let data = [];
       docs.forEach((doc) => {
         let docdata = doc.data();
@@ -89,38 +89,40 @@ render() {
   if (!this.state.user) {
     return (
       <Router>
-      <div className="App">
-      <Otsikko />
-      <Content>
-        <p>Et ole kirjautunut sisään!</p>
-        <p><Button primary onClick={this.login}>KIRJAUDU</Button></p>
-        {this.state.error?<p>{this.state.error}</p>:null}
-      </Content>
-      <Menu />
-      </div>
-      </Router>
-    );
-  }
-
-    return (
-      <div className="kokonaan">
-      <Router>
         <div className="App">
           <Otsikko />
-          <Route path="/" exact render={() => <Tankit data={this.state.data} /> } />
-          <Route path="/stats" render={() => <Stats data={this.state.data} /> } />
-          <Route path="/settings" render={() => <Settings onLogout={this.logout}
-                                                          user={this.state.user} /> } />
-          <Route path="/add" render={() => <AddTankki onFormSubmit={this.handleFormSubmit} />} />
-          <Route path="/edit/:id" render={(props) => <EditTankki data={this.state.data} 
-                                                                 onFormSubmit={this.handleFormSubmit} 
-                                                                 onDeleteTankki={this.handleDeleteTankki} 
-                                                                 {...props} />} />
+          <Content>
+            <div className="app_welcome">
+            <div>Et ole vielä kirjautunut sisään.</div>
+            <div><Button primary onClick={this.login}>KIRJAUDU</Button></div>
+            <div>{this.state.error?<p>{this.state.error}</p>:null}</div>
+            </div>
+          </Content>
           <Menu />
         </div>
       </Router>
-      </div>
-    );
+    )
+  }
+
+return (
+  <div className="kokonaan">
+  <Router>
+    <div className="App">
+      <Otsikko />
+      <Route path="/" exact render={() => <Tankit data={this.state.data} /> } />
+      <Route path="/stats" render={() => <Stats data={this.state.data} /> } />
+      <Route path="/settings" render={() => <Settings onLogout={this.logout}
+                                                      user={this.state.user} /> } />
+      <Route path="/add" render={() => <AddTankki onFormSubmit={this.handleFormSubmit} />} />
+      <Route path="/edit/:id" render={(props) => <EditTankki data={this.state.data} 
+                                                              onFormSubmit={this.handleFormSubmit} 
+                                                              onDeleteTankki={this.handleDeleteTankki} 
+                                                              {...props} />} />
+      <Menu />
+    </div>
+  </Router>
+  </div>
+  );
   }
 }
 

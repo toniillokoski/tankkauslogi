@@ -2,24 +2,22 @@
     background-color: #cccccc;
     color: black;
     border: none;
-    padding: 1em;
     outline: none;
+    padding: 0.7em;
     margin: 0.5em;
-    border-radius: 0.5em;
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px;
+    border-radius: 0.2em;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 2px;
     font-weight: bold;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     opacity: 0.8;
-    font-weight: bold;
-    border: 1px solid #0c0c0c;
 }
 
 .button:active {
     box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 5px;
-    background-color: #7c7b7b;
+    background-color: #999999;
 }
 
 .button:hover {
@@ -28,8 +26,7 @@
 
 .button--primary {
     background: radial-gradient(circle, rgba(255,151,0,1) 50%, rgba(255,0,52,1) 80%);
-/*  background: linear-gradient(to top left, #ff9900 0%, #ff0000 80%); */
-    color: #000;
+    color: #000000;
 }
 
 .button--primary:active {
@@ -54,10 +51,10 @@
 
 .button--floating {
     position: fixed;
-    bottom: 4.5rem;
+    bottom: 5rem;
     right: 1rem;  
     border-radius: 50%;
-    font-size: 2rem;
-    width: 2rem;
-    height: 2rem;
+    font-size: 2.5rem;
+    width: 1.9rem;
+    height: 1.9rem;
 }

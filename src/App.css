@@ -13,14 +13,23 @@
   flex-direction: column;
   font-family: 'Ubuntu', sans-serif;
   color: #000000;
+  background-color: #1a1919;
   transform: translateZ(0);
 }
 
 .App > * {
   flex: 1 1 auto;
-  background-color: #1f1e1e;
+  /* background-color: #1f1e1e; */
 }
 
 .kokonaan {
 background-color: #000000de;
+}
+
+.app_welcome {
+  padding-top: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
 }
