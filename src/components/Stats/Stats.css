@@ -17,6 +17,14 @@
     align-items: center;
     text-align: center;
     justify-content: center;
-    color: rgba(248, 153, 36, 0.842);
+    color: #ffffffe8;
+    font-size: larger;
+}
+
+.stats h2 {
+    justify-content: center;
+    display: flex;
+    margin: 1em;
+    color: rgb(218, 218, 218);
 }
 

@@ -7,22 +7,30 @@
 
 .settings__profile {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding-top: 3em;
+    padding-top: 1em;
 }
 
 .settings__userdata {
-    display: flex;
+    display: flexbox;
+    align-content: center;
+    justify-content: space-evenly;
+    padding: 2em;
 }
-
+ /*
 .settings {
     padding: 2em;
 }
+*/
 
 .settings h2 {
-    display: flex;
     justify-content: center;
-    align-items: center;
+    display: flex;
+    margin: 1.4em;
+    color: rgb(218, 218, 218);
 }
 
+.settings button {
+    font-size: 18px;
+}

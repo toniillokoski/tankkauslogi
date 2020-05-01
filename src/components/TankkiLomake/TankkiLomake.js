@@ -121,7 +121,7 @@ class TankkiLomake extends React.Component {
         </div>
 
         { this.props.onDeleteTankki ? 
-        <div className="uusiTankkaus__napit">
+        <div className="uusiTankkaus__lisanapit">
           <div>
             <Button onClick={this.handleDeleteTankki}>POISTA</Button>
           </div>

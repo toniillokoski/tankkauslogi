@@ -22,7 +22,7 @@
 .tankkaus__litra, .tankkaus__euro,
 .tankkaus__pvm, .tankkaus__km {
     font-size: 95%;
-    color: rgba(255, 255, 255, 0.911);
+    color: #ffffffe8;
 }
 
 .tankkaus > div {

@@ -5,6 +5,7 @@ import './Tankit.css';
 import Tankkaus from '../Tankkaus/Tankkaus';
 import Content from '../Content/Content';
 
+import AddIcon from '@material-ui/icons/Add';
 import { FloatingButton } from '../buttons';
 
 
@@ -24,7 +25,7 @@ let rows = props.data.map( invoice => {
         <div style={{paddingBottom: '4rem'}}>
         {rows}
         </div>
-        <Link to="/add"><FloatingButton primary>+</FloatingButton></Link>
+        <Link to="/add"><FloatingButton primary><AddIcon fontSize="large" /></FloatingButton></Link>
       </Content>
     );
   }

@@ -37,7 +37,7 @@ componentDidMount() {
         user: user
       });
       this.refData = this.dbRef.collection("users").doc(user.uid).collection('data');
-      this.refData.orderBy("pvm","desc").onSnapshot((docs) => {
+      this.unsubscribe = this.refData.orderBy("pvm","desc").onSnapshot((docs) => {
       let data = [];
       docs.forEach((doc) => {
         let docdata = doc.data();
@@ -76,6 +76,7 @@ login() {
 }
 
 logout() {
+  this.unsubscribe();
   auth.signOut().then(() => {
     this.setState({
       user: null
@@ -88,19 +89,21 @@ render() {
 
   if (!this.state.user) {
     return (
+      <div className="kokonaan">
       <Router>
         <div className="App">
           <Otsikko />
           <Content>
             <div className="app_welcome">
             <div>Et ole vielä kirjautunut sisään.</div>
-            <div><Button primary onClick={this.login}>KIRJAUDU</Button></div>
+            <div><Button third onClick={this.login}>KIRJAUDU</Button></div>
             <div>{this.state.error?<p>{this.state.error}</p>:null}</div>
             </div>
           </Content>
           <Menu />
         </div>
       </Router>
+      </div>
     )
   }
 

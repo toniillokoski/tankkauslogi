@@ -4,7 +4,7 @@ import './buttons.css';
 
 const classNames = classnames => classnames.join(" ");
 
-const Button = ({ className = "", primary, secondary, ...props}) => {
+const Button = ({ className = "", primary, secondary, third, ...props}) => {
     return (
         <button 
         type="button" 
@@ -12,7 +12,8 @@ const Button = ({ className = "", primary, secondary, ...props}) => {
             "button",
             className,
             primary ? "button--primary" : "",
-            secondary ? "button--secondary" : ""
+            secondary ? "button--secondary" : "",
+            third ? "button--third" : ""
         ])}
         {...props} />
     );

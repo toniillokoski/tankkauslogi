@@ -55,11 +55,9 @@ h2 {
     flex: 1 1 auto;
 }
 
-/*
-input[type="date"] {
-    display:block;
-    -webkit-appearance: textfield;
-    -moz-appearance: textfield;
-    min-height: 2.2em;
+.uusiTankkaus__lisanapit button {
+    margin-top: 1em;
+    display: flex;
+    flex: 1 1 auto;
+    width: 300px;
 }
-*/
