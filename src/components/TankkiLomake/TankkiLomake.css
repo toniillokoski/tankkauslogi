@@ -46,18 +46,26 @@ h2 {
 .uusiTankkaus__napit {
     margin-top: 1em;
     display: flex;
+    justify-content: space-evenly;
 }
 
 .uusiTankkaus__napit > div {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     flex: 1 1 auto;
 }
 
-.uusiTankkaus__lisanapit button {
+.uusiTankkaus__napit button {
+    font-size: 0.9rem;
+}
+
+.uusiTankkaus__napit2 {
     margin-top: 1em;
     display: flex;
-    flex: 1 1 auto;
-    width: 300px;
+    justify-content: space-evenly;
+}
+
+.uusiTankkaus__napit2 button {
+    font-size: 0.9rem;
+    width: 15rem;
 }

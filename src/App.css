@@ -19,7 +19,6 @@
 
 .App > * {
   flex: 1 1 auto;
-  /* background-color: #1f1e1e; */
 }
 
 .kokonaan {
@@ -35,5 +34,5 @@ background-color: #000000de;
 }
 
 .app_welcome button {
-  font-size: 18px;
+  font-size: 15px;
 }

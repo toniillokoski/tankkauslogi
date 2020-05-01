@@ -34,13 +34,13 @@
 }
 
 .button--secondary {
-    background: linear-gradient(to top left, #ffb13c 0%, #f83e3e 100%);
+    background: linear-gradient(to bottom right, #ffb13c 0%, #f83e3e 100%);
     color: #000000;
     font-weight: bold;
 }
 
 .button--secondary:active {
-    background: linear-gradient(to top left, #fa9c0f 0%, #f71111 100%);
+    background: linear-gradient(to bottom right, #fa9c0f 0%, #f71111 100%);
 }
 
 .button:disabled {

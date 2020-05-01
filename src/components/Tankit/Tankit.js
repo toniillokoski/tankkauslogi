@@ -12,22 +12,21 @@ import { FloatingButton } from '../buttons';
 
 function Tankit(props) {
 
-let rows = props.data.map( invoice => {
-  return (
+  let rows = props.data.map( invoice => {
+    return (
       <Tankkaus data={invoice} key={invoice.id} />
     );
   }
-);
+  );
 
-    return (
-      
-      <Content>
-        <div style={{paddingBottom: '4rem'}}>
+  return (
+    <Content>
+      <div style={{paddingBottom: '4rem'}}>
         {rows}
-        </div>
-        <Link to="/add"><FloatingButton primary><AddIcon fontSize="large" /></FloatingButton></Link>
-      </Content>
-    );
-  }
+      </div>
+      <Link to="/add"><FloatingButton primary><AddIcon fontSize="large" /></FloatingButton></Link>
+    </Content>
+  );
+}
 
-  export default Tankit;
+export default Tankit;

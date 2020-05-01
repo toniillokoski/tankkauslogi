@@ -9,12 +9,8 @@ function Stats(props) {
 
   const reducer = (groupedData, currentItem) => {
     const index = groupedData.findIndex(item => item.asema === currentItem.asema);
-    if (index >= 0) {
-      groupedData[index].euro = groupedData[index].euro + currentItem.euro;
-    }
-    else {
-      groupedData.push({asema: currentItem.asema, euro: currentItem.euro});
-    }
+    if (index >= 0) { groupedData[index].euro = groupedData[index].euro + currentItem.euro; }
+    else { groupedData.push({asema: currentItem.asema, euro: currentItem.euro}); }
     return groupedData;
   }
 
@@ -70,21 +66,21 @@ function Stats(props) {
     }
   }
 
-    return (
-      <Content>
-        <div className="stats">
+  return (
+    <Content>
+      <div className="stats">
         <h2>Tilastot</h2>
         <h3>Aikajanan kulut</h3>
-        <div className="stats__graph">
-        <Line data={data} options={options} />
-        </div>
+          <div className="stats__graph">
+            <Line data={data} options={options} />
+          </div>
         <h3>Tankkaukset Asemittain</h3>
-        <div className="stats__graph">
-        <Doughnut data={doughnutData} />
-        </div>
-        </div>
-      </Content>
-    );
-  }
+          <div className="stats__graph">
+            <Doughnut data={doughnutData} />
+          </div>
+      </div>
+    </Content>
+  );
+}
 
 export default Stats;
