@@ -30,6 +30,7 @@ class App extends Component {
     this.logout = this.logout.bind(this);
   }
 
+  
   componentDidMount() {
     auth.onAuthStateChanged((user) => {
       if (user) {
@@ -51,15 +52,18 @@ class App extends Component {
     });
   }
 
+  // Funktio, jolla syötetään uusi tieto firebasen databaseen.
   handleFormSubmit(newdata) {
     this.refData.doc(newdata.id).set(newdata);
   }
 
+// Poista-napille funktio, joka poistaa tiedon firebasen databasesta.
   handleDeleteTankki(id) {
     this.refData.doc(id).delete().then().catch(error => {
       console.error("Virhe tietoa poistettaessa: ", error)});
   }
 
+// Funktio sisäänkirjaantumiseen.
   login() {
     auth.signInWithPopup(provider).then((result) => {
       const user = result.user;
@@ -75,6 +79,7 @@ class App extends Component {
     });
   }
 
+// Uloskirjaus-funktio: poistaa Staten kohdasta "user" arvon.  
   logout() {
     this.unsubscribe();
     auth.signOut().then(() => {
@@ -84,6 +89,9 @@ class App extends Component {
       this.refData = null;
     });
   }
+// if-lauseke tarkistaa, löytyy staten käyttäjä-kohdasta jokin arvo (eli käyttäjä), jos
+// sitä ei ole, sovellus ajaa alla olevan koodin, joka näyttää sovelluksesta vain 
+// otsikon, menun ja sisääkirjaantumiseen vaihtoehdot.
 
   render() {
     if (!this.state.user) {
@@ -105,6 +113,8 @@ class App extends Component {
         </div>
       )
     }
+
+// Jos käyttäjä-tiedot löytyy, ajetaan tämä varsinainen sovelluskoodi
 
     return (
       <div className="kokonaan">
