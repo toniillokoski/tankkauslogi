@@ -17,6 +17,7 @@
     align-content: center;
     justify-content: space-evenly;
     padding: 2em;
+    text-align: center;
 }
 
 .settings h2 {

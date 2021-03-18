@@ -1,6 +1,5 @@
 .otsikko {
-    background: linear-gradient(to bottom right, #ff9900 40%, #ff0000 100%);
-/*  background-color: #f78b08b6;  */
+    background: #ff9900;
     display: flex;
     justify-content: center;
     max-height: 4em;

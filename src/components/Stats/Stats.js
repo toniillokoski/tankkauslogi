@@ -39,7 +39,7 @@ function Stats(props) {
   let data = {
     datasets: [
       {
-        label: "Tankattu bensa",
+        label: "Tankkaukset",
         data: linedata,
         fill: false,
         backgroundColor: 'white',
@@ -50,7 +50,7 @@ function Stats(props) {
 
   let options = {
     responsive: true,
-    maintainAspectRatio: false,
+    maintainAspectRatio: true,
     scales: {
       xAxes: [
         {
@@ -70,7 +70,6 @@ function Stats(props) {
     <Content>
       <div className="stats">
         <h2>Tilastot</h2>
-        <h3>Aikajanan kulut</h3>
           <div className="stats__graph">
             <Line data={data} options={options} />
           </div>

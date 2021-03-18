@@ -1,5 +1,5 @@
 .menu {
-    background: linear-gradient(to top left, #ff9900 40%, #ff0000 100%);
+    background: #ff9900;
 /*  background-color: #f78b08b6;  */
     display: flex;
     justify-content: space-evenly;
@@ -10,8 +10,3 @@
     border-top-right-radius: 5px;
   } 
   
-  
-  /*
-  background-color: #f78b08da;
-  background: linear-gradient(to bottom, #f78b08da 0%, #000000 100%);
-  */

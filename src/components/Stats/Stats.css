@@ -12,7 +12,7 @@
 }
 
 .stats h3 {
-    margin-top: 2em;
+    margin-top: 4em;
     margin-bottom: 2em;
     align-items: center;
     text-align: center;
@@ -27,4 +27,3 @@
     margin: 1em;
     color: rgb(218, 218, 218);
 }
-
